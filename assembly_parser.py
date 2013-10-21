@@ -215,8 +215,6 @@ class assembly_parser(object):
             # Increment argument counter for modifying list
             arg_count += 1
 
-        print raw_args
-
         # Branch instructions are all relative to location
         if (instruction == 'beq' or instruction == 'bne'):
             args[2] = (int(args[2]) - self.current_location - 4)/4
@@ -500,17 +498,18 @@ class assembly_parser(object):
 
         # new word!
         if self.current_location % 4 == 0:
-
             # Format it nicely
             self.output_array.append(hex(self.current_location) + ':    0x')
 
-            for i in range(0, len(bit_string) - 1, 8):
-                self.system_memory[self.current_location] = bit_string[i:i + 8]
+        for i in range(0, len(bit_string) - 1, 8):
+            self.system_memory[self.current_location] = bit_string[i:i + 8]
 
-                self.output_array[-1] += self.bin2hex(bit_string[i:i + 8])
+            self.output_array[-1] += self.bin2hex(bit_string[i:i + 8])
 
-                self.current_location += 1
+            self.current_location += 1
 
+        if self.current_location %4 == 0:
+            # Finish formatting nicely
             self.output_array[-1] += '    ' + instruction.ljust(5) + ', '.join(arguments)
 
     def print_memory_map(self):
@@ -519,10 +518,10 @@ class assembly_parser(object):
         print "The memory map is:\n"
         keylist = self.system_memory.keys()
         keylist.sort()
-        #for key in keylist:
-         #   print "%s: %s" % (key, self.system_memory[key])
+        for key in keylist:
+            print "%s: %s" % (key, self.system_memory[key])
 
-        #print "\nThe label list is: " + str(self.symbol_table)
+        print "\nThe label list is: " + str(self.symbol_table)
        # print "\nThe current location is: " + str(self.current_location)
         print '\n\n'
         print 'The memory map in HEX:'
