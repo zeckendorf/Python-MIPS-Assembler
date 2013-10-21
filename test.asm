@@ -23,4 +23,4 @@ jr $ra
 EQ: addi $t0, $t2, 100000
 lw $t5, 100000($t2)
 jal 10000
-Exit:
+Exit: .end
