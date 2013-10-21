@@ -81,6 +81,8 @@ class assembly_parser(object):
                     for byte in bytes:
                         self.current_location += 1
                     continue
+                if '.end' in line: #now we support magical directives that appear later in the project
+                    continue #now we support magical directives that appear later in the project
 
             # Make sure memory location lines up with divisions of 4
             self.fix_current_location()
@@ -143,6 +145,8 @@ class assembly_parser(object):
                             byte = hex(int(byte))
                         self.store_bit_string(self.hex2bin(byte.strip(), 8), 'BYTE', [])
                     continue
+                if '.end' in line: #now we support magical directives that appear later in the project
+                    continue #now we support magical directives that appear later in the project
 
             # Make sure memory locations line up after storing bytes
             self.fix_current_location()
