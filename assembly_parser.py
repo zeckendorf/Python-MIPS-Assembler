@@ -141,7 +141,7 @@ class assembly_parser(object):
                             byte = hex(int(byte[0:-1], 2))
                         else:
                             byte = hex(int(byte))
-                        self.store_bit_string(self.hex2bin(byte.strip(), 8), 'BYTE')
+                        self.store_bit_string(self.hex2bin(byte.strip(), 8), 'BYTE', [])
                     continue
 
             # Make sure memory locations line up after storing bytes
@@ -177,7 +177,7 @@ class assembly_parser(object):
         self.print_memory_map()
 
 
-    def parse_instruction(self, instruction, args):
+    def parse_instruction(self, instruction, raw_args):
         ''' Parses instruction, places proper hex into memory
             Different cases for R, I, J instructions
         '''
@@ -187,6 +187,7 @@ class assembly_parser(object):
         # parse arguments
         arg_count = 0
         offset    = 'not_valid'
+        args      = raw_args[:]
         for arg in args:
             if '(' in arg:
 
@@ -213,6 +214,8 @@ class assembly_parser(object):
 
             # Increment argument counter for modifying list
             arg_count += 1
+
+        print raw_args
 
         # Branch instructions are all relative to location
         if (instruction == 'beq' or instruction == 'bne'):
@@ -257,7 +260,7 @@ class assembly_parser(object):
             # Create 32-bit string to divide up into bytes
             bit_string = op_binary + rs_binary + rt_binary + rd_binary + shamt_bin + funct_bin
 
-            self.store_bit_string(bit_string, instruction)
+            self.store_bit_string(bit_string, instruction, raw_args)
 
             return
 
@@ -291,7 +294,7 @@ class assembly_parser(object):
             # Create 32-bit string to divide up into bytes
             bit_string = op_binary + rs_binary + rt_binary + im_binary
 
-            self.store_bit_string(bit_string, instruction)
+            self.store_bit_string(bit_string, instruction, raw_args)
             return
 
         # J instruction
@@ -307,7 +310,7 @@ class assembly_parser(object):
             bit_string = op_binary + address_binary
 
             # Store bit string in memory
-            self.store_bit_string(bit_string, instruction)
+            self.store_bit_string(bit_string, instruction, raw_args)
             return
 
         return
@@ -404,7 +407,6 @@ class assembly_parser(object):
         count = 0
 
         for reg_instr in instructions:
-            print arguments[count]
             self.parse_instruction(reg_instr, arguments[count])
             count += 1
 
@@ -434,7 +436,7 @@ class assembly_parser(object):
                 # addi check for size of argument
                 if instruction == 'addi':
                     if self.value_outside_range(int(args[2])):
-                        return 8
+                        return 12
                     else:
                         return 4
 
@@ -444,15 +446,13 @@ class assembly_parser(object):
                         # Parse offset from known syntax
                         offset = int(args[1][0:args[1].find('(')])
                         if self.value_outside_range(offset):
-                            return 8
+                            return 12
                         else:
                             return 4
 
                 # Branch instructions will always be same amount of regular instructions
-                if instruction == 'bge':
+                if instruction == 'bgt' or instruction == 'ble' or instruction == 'bge':
                     return 8
-                if instruction == 'bgt' or instruction == 'ble':
-                    return 12
 
                 # move and clear always are 4 bytes
                 return 4
@@ -494,7 +494,7 @@ class assembly_parser(object):
         hex_string = hex_string.zfill(2)
         return hex_string
 
-    def store_bit_string(self, bit_string, instruction):
+    def store_bit_string(self, bit_string, instruction, arguments):
         ''' Store bit string into current memory block, divided into bytes
         '''
 
@@ -511,7 +511,7 @@ class assembly_parser(object):
 
                 self.current_location += 1
 
-            self.output_array[-1] += '    ' + instruction
+            self.output_array[-1] += '    ' + instruction.ljust(5) + ', '.join(arguments)
 
     def print_memory_map(self):
         ''' Print memory map as it exists after allocation

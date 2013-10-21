@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf2c011f-ce39-4f96-bebb-9e4efa340a00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Working Assembler.iml" afterPath="$PROJECT_DIR$/.idea/Working Assembler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assembler.py" afterPath="$PROJECT_DIR$/assembler.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assembly_parser.py" afterPath="$PROJECT_DIR$/assembly_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pseudoinstruction_table.py" afterPath="$PROJECT_DIR$/pseudoinstruction_table.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register_table.py" afterPath="$PROJECT_DIR$/register_table.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.asm" afterPath="$PROJECT_DIR$/test.asm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Working Assembler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,53 +24,72 @@
     <favorites_list name="Working Assembler" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="assembly_parser.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assembly_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="503" column="30" selection-start="18270" selection-end="18270" vertical-scroll-proportion="0.47633824" vertical-offset="6931" max-vertical-offset="8250">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pseudoinstruction_table.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pseudoinstruction_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instruction_table.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/instruction_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="14" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assembler.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assembler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="8" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_table.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="15" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="assembly_parser.py" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assembly_parser.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="444" column="38" selection-start="16148" selection-end="16148" vertical-scroll-proportion="0.5694337" vertical-offset="5926" max-vertical-offset="8250">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pseudoinstruction_table.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pseudoinstruction_table.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="11" column="19" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="instruction_table.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/instruction_table.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="18" column="14" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="870">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="assembler.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assembler.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="27" column="8" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="register_table.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/register_table.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="26" column="15" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="assembly_parser.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assembly_parser.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="513" column="72" selection-start="18702" selection-end="18702" vertical-scroll-proportion="2.2328768" vertical-offset="4761" max-vertical-offset="8250">
+                  <folding>
+                    <marker date="1382334112000" expanded="true" signature="18112:18719" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -485,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pseudoinstruction_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register_table.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="15" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
@@ -499,9 +503,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pseudoinstruction_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="19" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assembly_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="503" column="30" selection-start="18270" selection-end="18270" vertical-scroll-proportion="0.47633824" vertical-offset="6931" max-vertical-offset="8250">
+        <state line="444" column="38" selection-start="16148" selection-end="16148" vertical-scroll-proportion="0.5694337" vertical-offset="5926" max-vertical-offset="8250">
           <folding />
         </state>
       </provider>
