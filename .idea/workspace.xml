@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf2c011f-ce39-4f96-bebb-9e4efa340a00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assembly_parser.py" afterPath="$PROJECT_DIR$/assembly_parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="cf2c011f-ce39-4f96-bebb-9e4efa340a00" name="Default" comment="" />
     <ignored path="Working Assembler.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +26,7 @@
       <file leaf-file-name="assembly_parser.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assembly_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="88" selection-start="5001" selection-end="5001" vertical-scroll-proportion="0.33281612" vertical-offset="1716" max-vertical-offset="8235">
+            <state line="144" column="24" selection-start="5025" selection-end="5026" vertical-scroll-proportion="0.33281612" vertical-offset="1731" max-vertical-offset="8235">
               <folding />
             </state>
           </provider>
@@ -494,7 +491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assembly_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="88" selection-start="5001" selection-end="5001" vertical-scroll-proportion="0.33281612" vertical-offset="1716" max-vertical-offset="8235">
+        <state line="144" column="24" selection-start="5025" selection-end="5026" vertical-scroll-proportion="0.33281612" vertical-offset="1731" max-vertical-offset="8235">
           <folding />
         </state>
       </provider>
