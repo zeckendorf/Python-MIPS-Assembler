@@ -1,1 +1,4 @@
 Working Assembler for EE126, by Tolga, Sam, and Zach
+INSTRUCTIONS:
+1)python assembler.py /path/to/test_file.asm
+
